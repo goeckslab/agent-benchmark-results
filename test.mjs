@@ -15,4 +15,5 @@ assert.match(html, /<details class="example">/);
 assert.match(html, /Ground truth is unavailable/);
 assert.match(html, /predicted correct/);
 assert.match(html, /predicted incorrect/);
+assert.doesNotMatch(html, /ensemble reference/i);
 assert.doesNotMatch(html, /Full results/);
