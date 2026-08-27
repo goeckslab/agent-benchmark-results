@@ -23,6 +23,6 @@ test("renders both benchmark comparisons and publication notes", async () => {
   assert.match(html, /CompBioBench/);
   assert.match(html, /Anycode/);
   assert.match(html, /Galaxy/);
-  assert.match(html, /Luna Galaxy is incomplete and excluded/);
+  assert.match(html, /Choose a benchmark/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/);
 });
