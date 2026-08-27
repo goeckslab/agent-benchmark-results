@@ -6,4 +6,6 @@ assert.match(html, /BixBench Verified-50/);
 assert.match(html, /CompBioBench/);
 assert.match(html, /Anycode/);
 assert.match(html, /Galaxy/);
+assert.match(html, /Codex · high reasoning/);
+assert.match(html, /Codex · maximum reasoning/);
 assert.doesNotMatch(html, /Full results/);
