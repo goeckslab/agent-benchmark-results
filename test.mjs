@@ -11,4 +11,8 @@ assert.match(html, /Codex · maximum reasoning/);
 assert.match(html, /Evaluation examples/);
 assert.match(html, /BUSCO completeness/);
 assert.match(html, /Borzoi RNA-seq prediction/);
+assert.match(html, /<details class="example">/);
+assert.match(html, /Ground truth is unavailable/);
+assert.match(html, /predicted correct/);
+assert.match(html, /predicted incorrect/);
 assert.doesNotMatch(html, /Full results/);
