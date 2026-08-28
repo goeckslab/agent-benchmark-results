@@ -2,7 +2,7 @@
 
 A static results page comparing Open-ended code and Galaxy-API code performance on BixBench Verified-50 and CompBioBench.
 
-The Overall view gives each benchmark equal weight.
+Benchmark selectors update the leaderboard, with each selected benchmark receiving equal weight.
 
 The site is hosted with GitHub Pages. Open `index.html` directly for local review; no build step or dependencies are required.
 
