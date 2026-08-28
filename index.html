@@ -11,7 +11,7 @@
   <style>
     :root{--ink:#1d1d1f;--muted:#6e6e73;--line:#dedee2;--blue:#0071e3;--purple:#7c3aed;--green:#16803c;--red:#d92d20}
     *{box-sizing:border-box}body{margin:0;color:var(--ink);background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}a{color:var(--blue);text-decoration:none}.page{width:min(920px,calc(100% - 40px));margin:auto;padding-bottom:80px}header{display:flex;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--line);font-size:12px}header b{color:var(--ink)}h1{margin:76px 0 10px;font-size:clamp(42px,7vw,64px);letter-spacing:-.05em}.subtitle{margin:0;color:var(--muted);font-size:18px}.choice{display:flex;gap:30px;margin:56px 0 0;padding:0;border:0;border-bottom:1px solid var(--line)}.choice legend{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.choice input{position:absolute;opacity:0;pointer-events:none}.choice label{padding:0 0 14px;border-bottom:2px solid transparent;color:var(--muted);font-size:13px;cursor:pointer}.choice input:focus-visible+label{outline:2px solid var(--blue);outline-offset:4px}.choice input:checked+label{border-color:var(--ink);color:var(--ink);font-weight:650}.panels{padding-top:34px}.panel{display:none}.page:has(#bix:checked) .bix,.page:has(#compbio:checked) .compbio{display:block}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px}.section-head h2{margin:0;font-size:28px;letter-spacing:-.03em}.section-head p{margin:7px 0 0;color:var(--muted);font-size:12px}.legend{display:flex;justify-content:flex-end;gap:18px;margin:36px 0 10px;color:var(--muted);font-size:11px}.legend span{display:flex;align-items:center;gap:6px}.legend i{width:8px;height:8px;border-radius:50%}.anycode{background:var(--blue)}.galaxy{background:var(--purple)}.chart{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.row{display:grid;grid-template-columns:170px 1fr;gap:22px;align-items:center;padding:18px 0;border-top:1px solid #eeeef0}.row:first-child{border-top:0}.model b,.model small{display:block}.model b{font-size:13px}.model small{margin-top:4px;color:var(--muted);font-size:10px}.scores{display:grid;gap:6px}.scores>div{position:relative;height:22px;border-radius:5px;background:#f0f0f2;overflow:hidden}.scores i{display:block;height:100%;border-radius:5px}.scores span{position:absolute;z-index:1;right:8px;top:4px;font-size:11px;font-weight:650}.note{margin:16px 0 0;color:var(--muted);font-size:11px}.examples{margin-top:72px}.examples h3{margin:0;font-size:24px;letter-spacing:-.03em}.examples>p{margin:8px 0 24px;color:var(--muted);font-size:12px}.example{border-top:1px solid var(--line)}.example:last-child{border-bottom:1px solid var(--line)}.example summary{display:grid;grid-template-columns:150px 1fr 90px;gap:20px;padding:20px 0;cursor:pointer;list-style:none}.example summary::-webkit-details-marker{display:none}.example summary:focus-visible{outline:2px solid var(--blue);outline-offset:4px}.example small{color:var(--muted);font-size:10px;letter-spacing:.06em;text-transform:uppercase}.example code{display:block;margin-top:5px;color:var(--muted);font-size:9px;letter-spacing:0;text-transform:none}.example b{display:block;margin-bottom:6px;font-size:13px}.example p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}.pass{text-align:right}.pass b{margin:0;font-size:12px}.pass small{display:block;margin-top:5px;letter-spacing:0;text-transform:none}.runs{padding:0 0 18px 170px}.run{display:grid;grid-template-columns:140px 1fr 1fr;gap:16px;align-items:center;padding:10px 12px;border-top:1px solid #eeeef0;font-size:11px}.run>b{margin:0}.result{display:flex;align-items:center;gap:5px;color:var(--muted)}.result strong{width:52px;color:var(--ink);font-size:10px}.mark{font-style:normal;font-weight:750}.ok{color:var(--green)}.bad{color:var(--red)}.na{color:var(--muted);font-size:10px}@media(max-width:600px){h1{margin-top:54px}.choice{gap:20px;overflow-x:auto}.choice label{white-space:nowrap}.row{grid-template-columns:1fr;gap:8px}.legend{justify-content:flex-start}.example summary{grid-template-columns:1fr;gap:10px}.pass{text-align:left}.runs{padding-left:0}.run{grid-template-columns:1fr}.result strong{width:62px}}
-    .result strong{width:94px;white-space:nowrap}
+    .result strong{width:94px;white-space:nowrap}.page:has(#overall:checked) .overall{display:block}
   </style>
 </head>
 <body>
@@ -22,11 +22,24 @@
 
     <fieldset class="choice">
       <legend>Choose a benchmark</legend>
-      <input id="bix" name="benchmark" type="radio" checked><label for="bix">BixBench Verified-50</label>
+      <input id="overall" name="benchmark" type="radio" checked><label for="overall">Overall</label>
+      <input id="bix" name="benchmark" type="radio"><label for="bix">BixBench Verified-50</label>
       <input id="compbio" name="benchmark" type="radio"><label for="compbio">CompBioBench</label>
     </fieldset>
 
     <div class="panels">
+      <section class="panel overall">
+        <div class="section-head"><div><h2>Overall</h2><p>Equal-weight mean across BixBench Verified-50 and CompBioBench</p></div></div>
+        <div class="legend"><span><i class="anycode"></i>Open-ended code</span><span><i class="galaxy"></i>Galaxy-API code</span></div>
+        <div class="chart">
+          <div class="row"><div class="model"><b>GPT-5.6 Sol</b><small>Codex · high reasoning</small></div><div class="scores"><div><span>90.2%</span><i class="anycode" style="width:90.2%"></i></div><div><span>91.2%</span><i class="galaxy" style="width:91.2%"></i></div></div></div>
+          <div class="row"><div class="model"><b>GPT-5.5</b><small>Codex · high reasoning</small></div><div class="scores"><div><span>88.2%</span><i class="anycode" style="width:88.2%"></i></div><div><span>89.0%</span><i class="galaxy" style="width:89%"></i></div></div></div>
+          <div class="row"><div class="model"><b>GPT-5.6 Luna</b><small>Codex · maximum reasoning</small></div><div class="scores"><div><span>86.9%</span><i class="anycode" style="width:86.9%"></i></div><div><span>86.7%*</span><i class="galaxy" style="width:86.7%"></i></div></div></div>
+          <div class="row"><div class="model"><b>DeepSeek V4 Pro</b><small>Codex · high reasoning</small></div><div class="scores"><div><span>82.5%</span><i class="anycode" style="width:82.5%"></i></div><div><span>83.2%</span><i class="galaxy" style="width:83.2%"></i></div></div></div>
+        </div>
+        <p class="note">Each benchmark contributes 50%. * Luna Galaxy-API code uses BixBench only because its CompBioBench result is not published.</p>
+      </section>
+
       <section class="panel bix">
         <div class="section-head"><div><h2>BixBench Verified-50</h2><p>50 tasks · 3 runs per model and environment</p></div></div>
         <div class="legend"><span><i class="anycode"></i>Open-ended code</span><span><i class="galaxy"></i>Galaxy-API code</span></div>

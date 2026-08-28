@@ -2,6 +2,9 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
 const html = await readFile(new URL("index.html", import.meta.url), "utf8");
+assert.match(html, /id="overall"[^>]+checked/);
+assert.match(html, /Each benchmark contributes 50%/);
+assert.match(html, /90\.2%/);
 assert.match(html, /BixBench Verified-50/);
 assert.match(html, /CompBioBench/);
 assert.match(html, /Open-ended code/);
