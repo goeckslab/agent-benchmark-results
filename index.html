@@ -34,10 +34,10 @@
         <div class="chart">
           <div class="row"><div class="model"><b>GPT-5.6 Sol</b><small>Codex · high reasoning</small></div><div class="scores"><div><span>90.2%</span><i class="anycode" style="width:90.2%"></i></div><div><span>91.2%</span><i class="galaxy" style="width:91.2%"></i></div></div></div>
           <div class="row"><div class="model"><b>GPT-5.5</b><small>Codex · high reasoning</small></div><div class="scores"><div><span>88.2%</span><i class="anycode" style="width:88.2%"></i></div><div><span>89.0%</span><i class="galaxy" style="width:89%"></i></div></div></div>
-          <div class="row"><div class="model"><b>GPT-5.6 Luna</b><small>Codex · maximum reasoning</small></div><div class="scores"><div><span>86.9%</span><i class="anycode" style="width:86.9%"></i></div><div><span>86.7%*</span><i class="galaxy" style="width:86.7%"></i></div></div></div>
+          <div class="row"><div class="model"><b>GPT-5.6 Luna</b><small>Codex · maximum reasoning</small></div><div class="scores"><div><span>86.9%</span><i class="anycode" style="width:86.9%"></i></div><div><span>85.9%</span><i class="galaxy" style="width:85.9%"></i></div></div></div>
           <div class="row"><div class="model"><b>DeepSeek V4 Pro</b><small>Codex · high reasoning</small></div><div class="scores"><div><span>82.5%</span><i class="anycode" style="width:82.5%"></i></div><div><span>83.2%</span><i class="galaxy" style="width:83.2%"></i></div></div></div>
         </div>
-        <p class="note">Each selected benchmark contributes equally; with both selected, each contributes 50%. * Luna Galaxy-API code uses BixBench only because its CompBioBench result is not published.</p>
+        <p class="note">Each selected benchmark contributes equally; with both selected, each contributes 50%.</p>
       </section>
 
       <section class="panel bix">
@@ -75,35 +75,35 @@
       </section>
 
       <section class="panel compbio">
-        <div class="section-head"><div><h2>CompBioBench</h2><p>100 tasks · 21 published replicates</p></div></div>
+        <div class="section-head"><div><h2>CompBioBench</h2><p>100 tasks · 24 published replicates</p></div></div>
         <div class="legend"><span><i class="anycode"></i>Open-ended code</span><span><i class="galaxy"></i>Galaxy-API code</span></div>
         <div class="chart">
           <div class="row"><div class="model"><b>GPT-5.6 Sol</b><small>Codex · high reasoning</small></div><div class="scores"><div><span>91.0%</span><i class="anycode" style="width:91%"></i></div><div><span>91.7%</span><i class="galaxy" style="width:91.7%"></i></div></div></div>
           <div class="row"><div class="model"><b>GPT-5.5</b><small>Codex · high reasoning</small></div><div class="scores"><div><span>86.3%</span><i class="anycode" style="width:86.3%"></i></div><div><span>86.7%</span><i class="galaxy" style="width:86.7%"></i></div></div></div>
           <div class="row"><div class="model"><b>DeepSeek V4 Pro</b><small>Codex · high reasoning</small></div><div class="scores"><div><span>84.3%</span><i class="anycode" style="width:84.3%"></i></div><div><span>84.3%</span><i class="galaxy" style="width:84.3%"></i></div></div></div>
-          <div class="row"><div class="model"><b>GPT-5.6 Luna</b><small>Codex · maximum reasoning</small></div><div class="scores"><div><span>85.0%</span><i class="anycode" style="width:85%"></i></div><div><span>Not published</span></div></div></div>
+          <div class="row"><div class="model"><b>GPT-5.6 Luna</b><small>Codex · maximum reasoning</small></div><div class="scores"><div><span>85.0%</span><i class="anycode" style="width:85%"></i></div><div><span>85.0%</span><i class="galaxy" style="width:85%"></i></div></div></div>
         </div>
-        <p class="note">Three-replicate means. GPT-5.6 Sol Galaxy-API code uses official leaderboard scores for R1 (93%) and R3 (91%); R2 (91%) remains predicted. Other scores use official results where available and predictions otherwise. Luna Galaxy-API code is not yet published.</p>
+        <p class="note">Three-replicate means. GPT-5.6 Sol Galaxy-API code uses official leaderboard scores for R1 (93%) and R3 (91%); R2 (91%) remains predicted. GPT-5.6 Luna Galaxy-API code uses official scores for R1 (86%) and R3 (85%); R2 (84%) remains predicted. Other scores use official results where available and predictions otherwise.</p>
         <div class="examples">
           <h3>CompBioBench examples</h3>
           <p>Ground truth is unavailable. These marks show our predicted outcomes: ✓ predicted correct · × predicted incorrect</p>
-          <details class="example"><summary><small>Machine learning<code>borzoi-rnaseq-q1</code></small><div><b>Borzoi RNA-seq prediction</b><p>Recover total forward-strand RNA-seq coverage from a Borzoi model prediction over a genomic interval.</p></div><span class="pass"><b>90% predicted correct</b><small>View predictions</small></span></summary><div class="runs">
+          <details class="example"><summary><small>Machine learning<code>borzoi-rnaseq-q1</code></small><div><b>Borzoi RNA-seq prediction</b><p>Recover total forward-strand RNA-seq coverage from a Borzoi model prediction over a genomic interval.</p></div><span class="pass"><b>92% predicted correct</b><small>View predictions</small></span></summary><div class="runs">
             <div class="run"><b>GPT-5.5</b><span class="result"><strong>Open-ended code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark bad">×</i></span><span class="result"><strong>Galaxy-API code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span></div>
             <div class="run"><b>GPT-5.6 Sol</b><span class="result"><strong>Open-ended code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span><span class="result"><strong>Galaxy-API code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span></div>
             <div class="run"><b>DeepSeek V4 Pro</b><span class="result"><strong>Open-ended code</strong><i class="mark bad">×</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span><span class="result"><strong>Galaxy-API code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span></div>
-            <div class="run"><b>GPT-5.6 Luna</b><span class="result"><strong>Open-ended code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span><span class="result"><strong>Galaxy-API code</strong><span class="na">Not published</span></span></div>
+            <div class="run"><b>GPT-5.6 Luna</b><span class="result"><strong>Open-ended code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span><span class="result"><strong>Galaxy-API code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span></div>
           </div></details>
           <details class="example"><summary><small>Single-cell<code>three-way-barnyard-q1</code></small><div><b>Three-species mixture</b><p>Estimate human, mouse, and pig proportions from paired-end 10x scRNA-seq reads.</p></div><span class="pass"><b>100% predicted correct</b><small>View predictions</small></span></summary><div class="runs">
             <div class="run"><b>GPT-5.5</b><span class="result"><strong>Open-ended code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span><span class="result"><strong>Galaxy-API code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span></div>
             <div class="run"><b>GPT-5.6 Sol</b><span class="result"><strong>Open-ended code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span><span class="result"><strong>Galaxy-API code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span></div>
             <div class="run"><b>DeepSeek V4 Pro</b><span class="result"><strong>Open-ended code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span><span class="result"><strong>Galaxy-API code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span></div>
-            <div class="run"><b>GPT-5.6 Luna</b><span class="result"><strong>Open-ended code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span><span class="result"><strong>Galaxy-API code</strong><span class="na">Not published</span></span></div>
+            <div class="run"><b>GPT-5.6 Luna</b><span class="result"><strong>Open-ended code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span><span class="result"><strong>Galaxy-API code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span></div>
           </div></details>
-          <details class="example"><summary><small>Single-cell<code>three-way-barnyard-q2</code></small><div><b>Mixture and tissue origin</b><p>Recover species proportions and assign a tissue of origin for each species.</p></div><span class="pass"><b>71% predicted correct</b><small>View predictions</small></span></summary><div class="runs">
+          <details class="example"><summary><small>Single-cell<code>three-way-barnyard-q2</code></small><div><b>Mixture and tissue origin</b><p>Recover species proportions and assign a tissue of origin for each species.</p></div><span class="pass"><b>67% predicted correct</b><small>View predictions</small></span></summary><div class="runs">
             <div class="run"><b>GPT-5.5</b><span class="result"><strong>Open-ended code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark bad">×</i></span><span class="result"><strong>Galaxy-API code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span></div>
             <div class="run"><b>GPT-5.6 Sol</b><span class="result"><strong>Open-ended code</strong><i class="mark ok">✓</i><i class="mark bad">×</i><i class="mark ok">✓</i></span><span class="result"><strong>Galaxy-API code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark ok">✓</i></span></div>
             <div class="run"><b>DeepSeek V4 Pro</b><span class="result"><strong>Open-ended code</strong><i class="mark ok">✓</i><i class="mark bad">×</i><i class="mark ok">✓</i></span><span class="result"><strong>Galaxy-API code</strong><i class="mark bad">×</i><i class="mark ok">✓</i><i class="mark bad">×</i></span></div>
-            <div class="run"><b>GPT-5.6 Luna</b><span class="result"><strong>Open-ended code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark bad">×</i></span><span class="result"><strong>Galaxy-API code</strong><span class="na">Not published</span></span></div>
+            <div class="run"><b>GPT-5.6 Luna</b><span class="result"><strong>Open-ended code</strong><i class="mark ok">✓</i><i class="mark ok">✓</i><i class="mark bad">×</i></span><span class="result"><strong>Galaxy-API code</strong><i class="mark bad">×</i><i class="mark bad">×</i><i class="mark ok">✓</i></span></div>
           </div></details>
         </div>
       </section>
