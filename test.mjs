@@ -24,7 +24,7 @@ assert.match(html, /predicted correct/);
 assert.match(html, /predicted incorrect/);
 assert.match(html, /R1 \(84%\).*R2 \(89%\).*R3 \(87%\)/);
 assert.match(html, /R1 \(93%\).*R2 \(91%\).*R3 \(91%\)/);
-assert.match(html, /R1 \(86%\).*R3 \(85%\)/);
+assert.match(html, /Open-ended code R1 \(84%\).*R2 \(86%\).*R3 \(85%\).*Galaxy-API code R1 \(86%\).*R2 \(84%\).*R3 \(85%\)/);
 assert.match(html, /24 published replicates/);
 assert.match(html, /85\.9%/);
 assert.doesNotMatch(html, /Luna Galaxy-API code is not yet published/);
